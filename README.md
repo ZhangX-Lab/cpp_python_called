@@ -72,3 +72,5 @@ cd ..
 ### 总结
 
 **主要就是依赖pybind11这个库**，python调用Cpp的，就需要安装`pip install pybind11`，保证了python中能够找到xx.so并正确解析为python模块。cpp调用python，就需要使用git submodules或者find_pakage的方式找到pybind11库(本地安装`apt-get install python3-pybind11`)，然后会自动找xx.py文件，并导入执行。
+
+**需要注意：当你的项目汇总含有子项目时需要先上传子项目，然后当前项目使用git submodules将子项目作为子模块在上传才行，不然当前项目上传时会自动忽略一个已是git的仓库。**
